@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: 'countries',
-    loadChildren: () => import('./banderas/countries.module').then( m => m.BanderasModule ),
+    loadChildren: () => import('./banderas/countries.module').then( m => m.CountriesModule ),
   },
   {
     path: '**',
@@ -22,4 +22,4 @@ const routes: Routes = [
   ]
 })
 
-export class AppRoutingModule { }
+export class BanderasRoutingModule { }

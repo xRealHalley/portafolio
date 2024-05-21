@@ -25,4 +25,4 @@ import { CountryTableComponent } from './components/country-table/country-table.
 })
 
 
-export class BanderasModule { }
+export class CountriesModule { }

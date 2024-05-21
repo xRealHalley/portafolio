@@ -5,17 +5,17 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../material/material.module';
 import { MenuRoutingModule } from './menu-routing.module';
 
-import { BanderasComponent } from './pages/banderas/banderas.component';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
 import { InicioPageComponent } from './pages/inicio-page/inicio-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListaTareasComponent } from './pages/lista-tareas/lista-tareas.component';
 import { WeatherComponent } from './pages/weather/weather.component';
+import { BanderasModule } from './pages/banderas/banderas.module';
+
 
 
 @NgModule({
   declarations: [
-    BanderasComponent,
     CalculadoraComponent,
     InicioPageComponent,
     LayoutPageComponent,
@@ -26,7 +26,8 @@ import { WeatherComponent } from './pages/weather/weather.component';
     CommonModule,
     FormsModule,
     MaterialModule,
-    MenuRoutingModule
+    MenuRoutingModule,
+    BanderasModule
   ],
   bootstrap: [
     CalculadoraComponent

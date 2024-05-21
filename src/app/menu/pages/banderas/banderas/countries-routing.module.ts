@@ -38,4 +38,4 @@ const routes: Routes = [
   ],
 
 })
-export class BanderasRoutingModule { }
+export class CountriesRoutingModule { }
