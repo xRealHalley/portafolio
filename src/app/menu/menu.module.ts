@@ -14,6 +14,7 @@ import { BanderasModule } from './pages/banderas/banderas.module';
 
 
 
+
 @NgModule({
   declarations: [
     CalculadoraComponent,
