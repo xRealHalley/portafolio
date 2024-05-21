@@ -1,0 +1,45 @@
+.container input{
+  background: black;
+  color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 2px;
+  font-size: xx-large;
+}
+
+#igual {
+  width: 200px;
+}
+
+.container input:hover {
+  color: violet;
+  font-weight: bold;
+}
+
+.full {
+  border: 10px solid pink;
+  margin: 2px;
+  padding: 12px;
+  border-radius: 20px;
+  background-image: url('../../../../assets/images/fondo-calculadora.jpg');
+}
+
+input[type="text"]{
+  color:white;
+  text-align: right;
+}
+
+.scroll {
+  height: 250px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.card {
+  margin-top: 22px;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid white;
+  text-align: right;
+}
