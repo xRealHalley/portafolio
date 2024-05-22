@@ -31,6 +31,7 @@ export class CalculadoraComponent implements OnInit {
     this.display = this.display.slice(0, -1);
   }
 
+  // Función para calcular y guardar en el historial.
   result(): void {
     try {
       const sanitizedExpression = this.display.replace(/[^-()\d/*+.]/g, '');

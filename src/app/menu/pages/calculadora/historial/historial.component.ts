@@ -24,12 +24,14 @@ export class HistorialComponent implements OnInit {
     this.scrollToBottom();
   }
 
+  // Función para que el scrollBar se mueva automáticamente hacia el último resultado
   scrollToBottom(): void {
     try {
       this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
     } catch (err) { }
   }
 
+  // Función para limpiar el historial
   clearHistory(): void {
     this.calculadoraService.clearHistory();
     this.historyList = [];
