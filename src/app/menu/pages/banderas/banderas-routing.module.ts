@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   {
-    path: 'countries',
+    path: 'banderas',
     loadChildren: () => import('./banderas/countries.module').then( m => m.CountriesModule ),
   },
   {
     path: '**',
-    redirectTo: 'countries'
+    redirectTo: 'banderas'
   },
 ];
 

@@ -1,0 +1,10 @@
+<!-- historial.component.html -->
+<div class="card bs-dark text-light col-lg-12 col-sm-8" id="scroll">
+  <div class="card-title mr-2">
+    <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Historial
+  </div>
+  <div class="card-body scroll" #scrollContainer>
+      <p *ngFor="let operation of historyList">{{ operation }}</p>
+  </div>
+</div>
+<button class="btn btn-outline-dark mt-2" (click)="clearHistory()">Limpiar History</button>

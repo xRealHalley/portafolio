@@ -1,6 +1,5 @@
 <div class="container">
 
-
   <h1 class="text-center text-light mt-3">
     <i class="fa fa-calculator" aria-hidden="true"></i>
     Tarea Calculadora
@@ -9,7 +8,7 @@
   <div class="row mt-3 bg-dark full">
 
     <!-- Calculadora -->
-    <div class="col-sm-6 mt-2 mb-2">
+    <div class="col-lg-6 mt-2 mb-2">
 
       <div>
 
@@ -22,70 +21,51 @@
 
       </div>
       <div class="container text-center">
-        <b>
-          <h1>
-            <input type="button" (click)="deleteLastDigit()" value="AC">
+        <b class="d-inline-block">
+          <div class="btn-group" role="group" style="white-space: nowrap;">
+            <input type="button" (click)="deleteLastDigit()" value="DE">
             <input type="button" (click)="clear()" value="C">
             <input type="button" (click)="enterValue('.')" value=".">
             <input type="button" (click)="enterValue('/')" value="/">
-          </h1>
+          </div>
 
-          <h1>
+          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('7')" value="7">
             <input type="button" (click)="enterValue('8')" value="8">
             <input type="button" (click)="enterValue('9')" value="9">
             <input type="button" (click)="enterValue('*')" value="*">
-          </h1>
+          </div>
 
-          <h1>
+          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('4')" value="4">
             <input type="button" (click)="enterValue('5')" value="5">
             <input type="button" (click)="enterValue('6')" value="6">
             <input type="button" (click)="enterValue('-')" value="-">
-          </h1>
+          </div>
 
-          <h1>
+          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('1')" value="1">
             <input type="button" (click)="enterValue('2')" value="2">
             <input type="button" (click)="enterValue('3')" value="3">
             <input type="button" (click)="enterValue('+')" value="+">
-          </h1>
+          </div>
 
-          <h1>
+          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('0')" value="0">
             <input type="button" (click)="enterValue('00')" value="00">
             <input id="igual" type="button" (click)="result()" value="=">
-          </h1>
+          </div>
 
         </b>
       </div>
 
     </div>
 
-    <!-- History -->
+    <!-- Historial -->
     <div class="col-sm-6">
-
-      <div class="card bg-dark text-light" id="scroll">
-        <div class="card-title mr-2"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Historial </div>
-        <div class="card-body scroll" data-spy="scroll" data-target="#scroll" #mostrarOperciones>
-        </div>
-      </div>
+      <app-historial></app-historial>
     </div>
 
-    </div>
-
-  <div class="row text-center mt-2">
-    <div class="col-12">
-      <button class="btn btn-outline-secondary btn-lg mr-2 mb-2" style="text-align:center"><i class="fa fa-arrows-h"
-          aria-hidden="true"></i> Position History</button>
-      <button class="btn btn-outline-danger btn-lg mr-2 mb-2" style="text-align:center"><i class="fa fa-trash-o"
-          aria-hidden="true"></i> Limpiar History</button>
-      <button class="btn btn-outline-warning btn-lg  mb-2 btnPosDivs" style="text-align:center"><i
-          class="fa fa-arrows-h" aria-hidden="true"></i> Cambiar Posicion</button>
-    </div>
   </div>
-
-
-
 
 </div>

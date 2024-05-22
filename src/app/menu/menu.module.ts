@@ -11,6 +11,9 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListaTareasComponent } from './pages/lista-tareas/lista-tareas.component';
 import { WeatherComponent } from './pages/weather/weather.component';
 import { BanderasModule } from './pages/banderas/banderas.module';
+import { HistorialComponent } from './pages/calculadora/historial/historial.component';
+
+import { CalculadoraService } from '../services/calculadora.service';
 
 
 
@@ -21,7 +24,8 @@ import { BanderasModule } from './pages/banderas/banderas.module';
     InicioPageComponent,
     LayoutPageComponent,
     ListaTareasComponent,
-    WeatherComponent
+    WeatherComponent,
+    HistorialComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +36,9 @@ import { BanderasModule } from './pages/banderas/banderas.module';
   ],
   bootstrap: [
     CalculadoraComponent
+  ],
+  providers: [
+    CalculadoraService
   ]
 })
 export class MenuModule { }

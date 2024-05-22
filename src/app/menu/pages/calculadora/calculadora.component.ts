@@ -1,24 +1,20 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+// calculadora.component.ts
+import { Component, OnInit } from '@angular/core';
+import { CalculadoraService } from '../../../services/calculadora.service';
+
 
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
-  styleUrl: './calculadora.component.css',
+  styleUrls: ['./calculadora.component.css']
 })
 export class CalculadoraComponent implements OnInit {
 
-
-  @ViewChild('mostrarOperaciones', { static: true }) mostrarOperaciones !: ElementRef;
-
-  constructor( private renderer : Renderer2 ) {
-
-  }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
   display: string = '';
-  historyList: string[] = [];
+
+  constructor(private calculadoraService : CalculadoraService) {}
+
+  ngOnInit(): void {}
 
   // Función para introducir valores
   enterValue(value: string): void {
@@ -35,21 +31,15 @@ export class CalculadoraComponent implements OnInit {
     this.display = this.display.slice(0, -1);
   }
 
-  // Función para calcular resultado
   result(): void {
     try {
-      let expression = this.display;
-      let result = eval(expression);
+      const sanitizedExpression = this.display.replace(/[^-()\d/*+.]/g, '');
+      const result = new Function('return ' + sanitizedExpression)();
       this.display = result.toString();
+      this.calculadoraService.addOperation(`${sanitizedExpression} = ${result}`);
     } catch (error) {
       this.display = 'Error';
     }
   }
-
-  // Función
-  crearHtml(operacion: string, resultado: string) {
-  }
-
-
-
 }
+
