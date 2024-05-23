@@ -1,71 +1,47 @@
 <div class="container">
-
   <h1 class="text-center text-light mt-3">
     <i class="fa fa-calculator" aria-hidden="true"></i>
     Tarea Calculadora
   </h1>
 
-  <div class="row mt-3 bg-dark full">
-
+  <div class="bg-dark full">
     <!-- Calculadora -->
-    <div class="col-lg-6 mt-2 mb-2">
-
+    <div class="calculator-section mt-2 mb-2">
       <div>
-
         <div class="input-group mb-3">
-          <div class="input-group-prepend">
-
-          </div>
           <input type="text" class="form-control" [(ngModel)]="display" aria-label="Text input">
         </div>
-
       </div>
       <div class="container text-center">
         <b class="d-inline-block">
-          <div class="btn-group" role="group" style="white-space: nowrap;">
+          <div class="grid-container">
             <input type="button" (click)="deleteLastDigit()" value="DE">
             <input type="button" (click)="clear()" value="C">
             <input type="button" (click)="enterValue('.')" value=".">
             <input type="button" (click)="enterValue('/')" value="/">
-          </div>
-
-          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('7')" value="7">
             <input type="button" (click)="enterValue('8')" value="8">
             <input type="button" (click)="enterValue('9')" value="9">
             <input type="button" (click)="enterValue('*')" value="*">
-          </div>
-
-          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('4')" value="4">
             <input type="button" (click)="enterValue('5')" value="5">
             <input type="button" (click)="enterValue('6')" value="6">
             <input type="button" (click)="enterValue('-')" value="-">
-          </div>
-
-          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('1')" value="1">
             <input type="button" (click)="enterValue('2')" value="2">
             <input type="button" (click)="enterValue('3')" value="3">
             <input type="button" (click)="enterValue('+')" value="+">
-          </div>
-
-          <div class="btn-group" role="group" style="white-space: nowrap;">
             <input type="button" (click)="enterValue('0')" value="0">
             <input type="button" (click)="enterValue('00')" value="00">
             <input id="igual" type="button" (click)="result()" value="=">
           </div>
-
         </b>
       </div>
-
     </div>
 
     <!-- Historial -->
-    <div class="col-sm-6">
+    <div class="history-section">
       <app-historial></app-historial>
     </div>
-
   </div>
-
 </div>

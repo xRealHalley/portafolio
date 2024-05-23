@@ -14,6 +14,7 @@ import { BanderasModule } from './pages/banderas/banderas.module';
 import { HistorialComponent } from './pages/calculadora/historial/historial.component';
 
 import { CalculadoraService } from '../services/calculadora.service';
+import { BanderasComponent } from './pages/banderas/banderas.component';
 
 
 
@@ -21,11 +22,11 @@ import { CalculadoraService } from '../services/calculadora.service';
 @NgModule({
   declarations: [
     CalculadoraComponent,
+    HistorialComponent,
     InicioPageComponent,
     LayoutPageComponent,
     ListaTareasComponent,
-    WeatherComponent,
-    HistorialComponent
+    WeatherComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,8 @@ import { CalculadoraService } from '../services/calculadora.service';
     BanderasModule
   ],
   bootstrap: [
-    CalculadoraComponent
+    CalculadoraComponent,
+    HistorialComponent
   ],
   providers: [
     CalculadoraService

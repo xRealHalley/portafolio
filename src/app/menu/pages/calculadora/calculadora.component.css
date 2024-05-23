@@ -1,23 +1,22 @@
-.container input{
+ .container input {
   background: black;
   color: white;
   height: 50px;
-  width: 100px;
   border-radius: 10px;
   margin: 2px;
   font-size: xx-large;
-  float: left;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 #igual {
-  width: 200px;
+  grid-column: span 2;
 }
 
 .container input:hover {
   background: violet;
   font-weight: bold;
 }
-
 
 .full {
   border: 10px solid pink;
@@ -27,11 +26,34 @@
   background-image: url('../../../../assets/images/fondo-calculadora.jpg');
 }
 
-input[type="text"]{
-  color:white;
+input[type="text"] {
+  color: white;
   text-align: right;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
+.grid-container input[type="button"] {
+  width: calc(100% + 10px );
+  height: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
 
+@media (min-width: 768px) {
+  .full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .calculator-section, .history-section {
+    flex-basis: 48%;
+  }
+}
 

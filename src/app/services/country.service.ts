@@ -2,9 +2,9 @@ import { catchError, of, Observable, map, delay, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { CacheStore } from '../interfaces/cache-store.interface';
-import { Country } from '../interfaces/country';
-import { Region } from '../interfaces/region.type';
+import { CacheStore } from '../menu/pages/banderas/banderas/interfaces/cache-store.interface';
+import { Country } from '../menu/pages/banderas/banderas/interfaces/country';
+import { Region } from '../menu/pages/banderas/banderas/interfaces/region.type';
 
 @Injectable({providedIn: 'root'})
 

@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: 'banderas',
-    loadChildren: () => import('./banderas/countries.module').then( m => m.CountriesModule ),
+     loadChildren: () => import('./banderas/countries.module').then( m => m.CountriesModule ),
   },
   {
     path: '**',
