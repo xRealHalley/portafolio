@@ -2,26 +2,22 @@
 <hr>
 
 <ul class="list-group">
-
-  <li routerLink="/by-capital"
-  routerLinkActive="active"
-  class="list-group-item">
-  Por capital
+  <li [routerLink]="['./by-capital']"
+      routerLinkActive="active"
+      class="list-group-item">
+    Por capital
   </li>
 
-  <li routerLink="/by-country"
-  routerLinkActive="active"
-  class="list-group-item">
-  Por país
+  <li [routerLink]="['./by-country']"
+      routerLinkActive="active"
+      class="list-group-item">
+    Por país
   </li>
 
-  <li routerLink="/by-region"
-  routerLinkActive="active"
-  class="list-group-item">
-  Por región
+  <li [routerLink]="['./by-region']"
+      routerLinkActive="active"
+      class="list-group-item">
+    Por región
   </li>
-
-
-
 </ul>
 

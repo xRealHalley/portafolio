@@ -1,4 +1,3 @@
-// calculadora.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CalculadoraService } from '../../../services/calculadora.service';
 
