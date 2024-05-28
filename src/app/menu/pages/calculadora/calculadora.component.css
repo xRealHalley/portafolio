@@ -1,4 +1,7 @@
- .container input {
+h1 {
+  font-weight: 500;
+}
+.container input {
   background: black;
   color: white;
   height: 50px;

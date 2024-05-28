@@ -15,6 +15,7 @@ import { HistorialComponent } from './pages/calculadora/historial/historial.comp
 
 import { CalculadoraService } from '../services/calculadora.service';
 import { BanderasComponent } from './pages/banderas/banderas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -33,7 +34,8 @@ import { BanderasComponent } from './pages/banderas/banderas.component';
     FormsModule,
     MaterialModule,
     MenuRoutingModule,
-    BanderasModule
+    BanderasModule,
+    HttpClientModule
   ],
   bootstrap: [
     CalculadoraComponent,

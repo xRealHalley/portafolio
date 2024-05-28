@@ -4,7 +4,7 @@ import { TareasService } from '../../../services/tareas.service';
 @Component({
   selector: 'app-lista-tareas',
   templateUrl: './lista-tareas.component.html',
-  styleUrls: ['./lista-tareas.component.css']
+  styleUrl: './lista-tareas.component.css'
 })
 export class ListaTareasComponent implements OnInit {
   tareasPorHacer: any[] = [];

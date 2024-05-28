@@ -1,1 +1,27 @@
-<p>weather works!</p>
+<div class="weather-container">
+  <mat-card class="weather-card">
+    <mat-card-header>
+      <div mat-card-avatar class="weather-header-image"></div>
+      <mat-card-title>Tiempo de Hoy</mat-card-title>
+      <mat-card-subtitle>{{ location }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../../assets/images/soleado.jpg" alt="Weather image">
+    <mat-card-content *ngIf="weatherData" class="mt-2">
+      <p>
+        <strong>Temperatura: </strong> {{ weatherData.temperature }} °C
+      </p>
+      <p>
+        <strong>Humedad: </strong> {{ weatherData.humidity }} %
+      </p>
+      <p>
+        <strong>Velocidad del viento: </strong> {{ weatherData.windSpeed }} km/h
+      </p>
+    </mat-card-content>
+    <mat-card-content *ngIf="!weatherData">
+      <p class="mt-2">Cargando información del tiempo..</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="refreshWeatherData()">Refresh</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
