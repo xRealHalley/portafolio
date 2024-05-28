@@ -19,7 +19,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('./pages/banderas/banderas-routing.module').then(m => m.BanderasRoutingModule)
+            loadChildren: () => import('./pages/banderas/banderas.module').then(m => m.BanderasModule)
           }
         ]
       },
