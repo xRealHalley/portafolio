@@ -1,0 +1,16 @@
+<div *ngIf="countries.length === 0; else cards" class="alert alert-warning text-center">
+  No hay países que mostrar
+</div>
+
+<ng-template #cards>
+  <div class="row">
+    <div *ngFor="let country of countries; let i = index" class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card mb-4">
+        <img [src]="country.flags.svg" [alt]="country.name.common" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ country.name.common }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

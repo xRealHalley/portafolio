@@ -7,7 +7,7 @@ import { WeatherService } from '../../../services/weather.service';
   styleUrl: './weather.component.css'
 })
 export class WeatherComponent implements OnInit {
-  location: string = 'Paris';
+  location: string = 'London';
   weatherData: any;
 
   constructor(private weatherService: WeatherService) { }
@@ -32,7 +32,7 @@ export class WeatherComponent implements OnInit {
     );
   }
 
-  // Refrescar datos 
+  // Refrescar datos
   refreshWeatherData(): void {
     this.loadWeatherData();
   }

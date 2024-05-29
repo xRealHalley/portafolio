@@ -15,7 +15,8 @@ export class CountryService {
   public cacheStore: CacheStore = {
     byCapital : { term: '', countries: [] },
     byCountries : { term: '', countries: [] },
-    byRegion: { region: '', countries: [] }
+    byRegion: { region: '', countries: [] },
+    banderaPais: { term: '', countries: [] }
   }
 
   constructor(private http: HttpClient) {
@@ -78,6 +79,15 @@ export class CountryService {
     .pipe(
       tap( countries => this.cacheStore.byRegion = { region, countries }),
       tap( () => this.saveToLocalStorage() ),
+    );
+  }
+
+  searchBandera( term: string ): Observable<Country[]> {
+    const url = `${ this.apiUrl}/name/${ term }`;
+    return this.getCountriesRequest(url)
+    .pipe(
+      tap( countries => this.cacheStore.banderaPais = { term, countries }),
+      tap( () => this.saveToLocalStorage() )
     );
   }
 

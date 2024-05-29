@@ -6,6 +6,7 @@ export interface CacheStore {
   byCapital: TermCountries;
   byCountries: TermCountries;
   byRegion: RegionCountries;
+  banderaPais: TermCountries;
 }
 
 

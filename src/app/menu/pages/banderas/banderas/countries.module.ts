@@ -9,7 +9,10 @@ import { CountryTableComponent } from './components/country-table/country-table.
 
 import { SharedModule } from '../shared/shared.module';
 
+
 import { CountryService } from '../../../../services/country.service';
+import { BanderaPaisComponent } from './pages/bandera-pais/bandera-pais.component';
+import { MapTableComponent } from './components/map-table/map-table.component';
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { CountryService } from '../../../../services/country.service';
     ByCountryPageComponent,
     ByRegionPageComponent,
     CountryPageComponent,
-    CountryTableComponent
+    CountryTableComponent,
+    BanderaPaisComponent,
+    MapTableComponent
   ],
   imports: [
     CommonModule,
