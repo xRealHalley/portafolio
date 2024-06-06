@@ -16,6 +16,7 @@ import { HistorialComponent } from './pages/calculadora/historial/historial.comp
 import { CalculadoraService } from '../services/calculadora.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
+import { AuthService } from '../services/auth.service';
 
 
 
@@ -36,14 +37,14 @@ import { SharedModule } from '../shared/shared.module';
     MenuRoutingModule,
     BanderasModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
   ],
   bootstrap: [
     CalculadoraComponent,
     HistorialComponent
   ],
   providers: [
-    CalculadoraService
+
   ]
 })
 export class MenuModule { }

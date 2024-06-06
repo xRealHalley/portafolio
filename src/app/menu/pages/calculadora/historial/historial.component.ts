@@ -1,4 +1,3 @@
-// historial.component.ts
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CalculadoraService } from '../../../../services/calculadora.service';
 

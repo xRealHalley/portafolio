@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout-page',
@@ -15,4 +17,11 @@ export class LayoutPageComponent {
     { label: 'Weather', icon:'sunny', url: './weather' }
 
   ]
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  onLogout(): void {
+    this.authService.logout();
+    this.router.navigate(['/auth/login']); // Redirigir a la página de login
+  }
 }

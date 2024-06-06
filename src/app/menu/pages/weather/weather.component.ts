@@ -7,7 +7,7 @@ import { WeatherService } from '../../../services/weather.service';
   styleUrl: './weather.component.css'
 })
 export class WeatherComponent implements OnInit {
-  location: string = 'London';
+  location: string = 'Cáceres';
   weatherData: any;
 
   constructor(private weatherService: WeatherService) { }
